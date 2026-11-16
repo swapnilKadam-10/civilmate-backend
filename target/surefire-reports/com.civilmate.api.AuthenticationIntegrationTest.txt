@@ -1,0 +1,15 @@
+-------------------------------------------------------------------------------
+Test set: com.civilmate.api.AuthenticationIntegrationTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.748 s <<< FAILURE! -- in com.civilmate.api.AuthenticationIntegrationTest
+com.civilmate.api.AuthenticationIntegrationTest.migrationsAndAuthenticationLifecycleMeetPhaseTwoRequirements -- Time elapsed: 0.031 s <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The import org.springframework.boot.test.autoconfigure.web cannot be resolved
+	The import org.springframework.security.oauth2.jose.jws.JwsHeader cannot be resolved
+	AutoConfigureMockMvc cannot be resolved to a type
+	JwsHeader cannot be resolved
+	The method request(String, URI) in the type MockMvcRequestBuilders is not applicable for the arguments (String, String)
+
+	at com.civilmate.api.AuthenticationIntegrationTest.<init>(AuthenticationIntegrationTest.java:19)
+

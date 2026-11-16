@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:civilmate-tests;MODE=PostgreSQL;DATABASE_TO_LOWER=TRUE;DB_CLOSE_DELAY=-1;INIT=CREATE DOMAIN IF NOT EXISTS TIMESTAMPTZ AS TIMESTAMP WITH TIME ZONE\;CREATE DOMAIN IF NOT EXISTS JSONB AS JSON
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+    locations: classpath:db/test-migration
+
+security:
+  jwt:
+    secret-base64: VGhpc0lzQU5vblByb2R1Y3Rpb25UZXN0S2V5Rm9yQ2l2aWxNYXRlISE=
+    access-token-ttl-minutes: 15
+  refresh-token-ttl-days: 7
+  refresh-cookie-secure: true
