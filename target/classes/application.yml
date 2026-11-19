@@ -6,7 +6,7 @@ spring:
   datasource:
     url: ${SPRING_DATASOURCE_URL:jdbc:postgresql://localhost:5432/civilmate}
     username: ${SPRING_DATASOURCE_USERNAME:postgres}
-    password: ${SPRING_DATASOURCE_PASSWORD}
+    password: swapnil5945
   jpa:
     open-in-view: false
     hibernate:
@@ -22,7 +22,7 @@ springdoc.swagger-ui.path: /swagger-ui.html
 app.cors.allowed-origins: ${APP_CORS_ALLOWED_ORIGINS:http://localhost:5173}
 security:
   jwt:
-    secret-base64: ${JWT_SECRET_BASE64}
+    secret-base64: E9IgfTUypDuEPBTXQthvIvGpNKAgN/jy6TQVDJFeNqc=
     access-token-ttl-minutes: ${JWT_ACCESS_TTL_MINUTES:15}
   refresh-token-ttl-days: ${JWT_REFRESH_TTL_DAYS:7}
   refresh-cookie-secure: ${AUTH_COOKIE_SECURE:false}

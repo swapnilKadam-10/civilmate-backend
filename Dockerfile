@@ -1,6 +1,11 @@
-FROM eclipse-temurin:17-jre
+FROM maven:3.9.9-eclipse-temurin-17 AS build
+WORKDIR /workspace
+COPY pom.xml .
+COPY src ./src
+RUN mvn -B package
 
+FROM eclipse-temurin:17-jre
 WORKDIR /app
-COPY target/civilmate-api-*.jar /app/civilmate-api.jar
+COPY --from=build /workspace/target/civilmate-api-*.jar /app/civilmate-api.jar
 EXPOSE 8080
 ENTRYPOINT ["java", "-XX:MaxRAMPercentage=75.0", "-jar", "/app/civilmate-api.jar"]
